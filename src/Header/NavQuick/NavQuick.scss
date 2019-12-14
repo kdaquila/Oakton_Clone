@@ -1,0 +1,19 @@
+@import "../../variables";
+
+.navQuick {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.navQuick__link {
+  margin-right: $margin--md;
+  padding: $padding--sm 0;
+  font-family: $font-style--sanserif;
+  color: $theme-color__white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

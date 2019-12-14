@@ -1,0 +1,15 @@
+@import "../variables";
+
+.row1 {
+  display: flex;
+  padding: $padding--md 0;
+  background-color: $theme-color__blue5;
+}
+
+.Header {
+
+}
+
+h1 {
+  font-size: $font-size--lg;
+}
