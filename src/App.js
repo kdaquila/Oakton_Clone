@@ -1,15 +1,15 @@
 import React from "react";
 import Header from "./Header/Header";
 import Page from "./Page/Page";
-import PageContent from "./Page/PageContent/PageContent";
 import "./_reset.scss";
+import "./App.scss"
 
 export default function App() {
     return (
         <Page>
-            <PageContent>
+            <div className="page__content">
                 <Header />
-            </PageContent>
+            </div>
         </Page>
     )
 }
