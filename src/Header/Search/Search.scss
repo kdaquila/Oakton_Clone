@@ -1,4 +1,5 @@
 @import "../../variables";
+@import "~@fortawesome/fontawesome-free/css/fontawesome";
 
 .search__form {
   display: flex;
@@ -24,4 +25,9 @@
   font-family: FontAwesome, serif;
   font-size: $font-size--md;
   border-width: 1px;
+}
+
+.search__icon {
+  @extend .fa;
+  @extend .fa-search;
 }

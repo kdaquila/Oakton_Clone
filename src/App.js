@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header/Header";
 import Page from "./Page/Page";
 import "./_reset.scss";
-import "./App.scss"
+import styles from "./App.scss";
 
 export default function App() {
     return (
