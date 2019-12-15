@@ -1,13 +1,23 @@
 import React from "react";
+import {createUseStyles} from 'react-jss';
 import CallToAction from "./CallToAction/CallToAction";
 import NavQuick from "./NavQuick/NavQuick";
 import Search from "./Search/Search";
-import styles from "./Header.scss";
+import variables from "../variables.js";
+
+const useStyles = createUseStyles({
+    header__row1: {
+        display: "flex",
+        padding: `${variables["padding--md"]} 0`,
+        backgroundColor: variables["theme-color__blue5"],
+    }
+})
 
 export default function Header() {
+    const classes = useStyles();
     return (
         <header>
-            <div className={styles.header__row1}>
+            <div className={classes.header__row1}>
                 <CallToAction/>
                 <NavQuick/>
                 <Search/>
