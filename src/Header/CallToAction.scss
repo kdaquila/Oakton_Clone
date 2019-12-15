@@ -19,4 +19,8 @@
     background-color: $theme-color__blue7;
     text-decoration: underline;
   }
+
+  &:active {
+    background-color: $theme-color__blue6;
+  }
 }
