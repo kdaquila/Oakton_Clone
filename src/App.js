@@ -7,9 +7,7 @@ import "./App.scss"
 export default function App() {
     return (
         <Page>
-            <div className="page__content">
-                <Header />
-            </div>
+            <Header />
         </Page>
     )
 }

@@ -3,6 +3,10 @@ import "./Page.scss"
 
 export default function Page(props) {
     return (
-        <div class="page">{props.children}</div>
+        <div className="page">
+            <div className="page__content">
+                {props.children}
+            </div>
+        </div>
     )
 }

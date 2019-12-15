@@ -3,3 +3,9 @@
 .page {
   background-color: $theme-color__blue5;
 }
+
+.page__content {
+  width: 80%;
+  margin: 0 auto;
+  background-color: $theme-color__white;
+}
