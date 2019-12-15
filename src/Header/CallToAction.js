@@ -1,7 +1,7 @@
 import React from "react";
 import {createUseStyles} from 'react-jss';
 
-import v from "../../variables.js";
+import v from "../variables.js";
 
 const useStyles = createUseStyles({
     callToAction__button: {

@@ -1,6 +1,6 @@
 import React from "react";
 import {createUseStyles} from 'react-jss';
-import CallToAction from "./CallToAction/CallToAction";
+import CallToAction from "./CallToAction";
 import NavQuick from "./NavQuick/NavQuick";
 import Search from "./Search/Search";
 import variables from "../variables.js";
