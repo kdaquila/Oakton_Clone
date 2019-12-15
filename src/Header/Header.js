@@ -1,7 +1,7 @@
 import React from "react";
-import CallToAction from "./CallToAction/CallToAction";
-import NavQuick from "./NavQuick/NavQuick";
-import Search from "./Search/Search";
+import CallToAction from "./CallToAction";
+import NavQuick from "./NavQuick";
+import Search from "./Search";
 import styles from "./Header.scss";
 
 export default function Header() {
