@@ -1,7 +1,7 @@
 import React from "react";
 import {createUseStyles} from 'react-jss';
 import CallToAction from "./CallToAction";
-import NavQuick from "./NavQuick/NavQuick";
+import NavQuick from "./NavQuick";
 import Search from "./Search/Search";
 import variables from "../variables.js";
 
