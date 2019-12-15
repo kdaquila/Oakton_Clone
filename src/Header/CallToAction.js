@@ -4,6 +4,11 @@ import {createUseStyles} from 'react-jss';
 import v from "../variables.js";
 
 const useStyles = createUseStyles({
+    callToAction: {
+        display: "flex",
+        alignItems: "center",
+    },
+
     callToAction__button: {
         marginRight: v["margin--sm"],
         borderRadius: "2px",
@@ -29,7 +34,7 @@ const useStyles = createUseStyles({
 export default function CallToAction() {
     const classes = useStyles();
     return (
-        <div>
+        <div className={classes.callToAction}>
             <button className={classes.callToAction__button}>Visit</button>
             <button className={classes.callToAction__button}>Apply</button>
             <button className={classes.callToAction__button}>Register</button>
