@@ -1,11 +1,11 @@
 @import "../variables";
 
 .callToAction {
-
+  display: flex;
+  align-items: center;
 }
 
 .callToAction__button {
-  margin-right: $margin--sm;
   border-radius: 2px;
   border: none;
   border-top: solid 1px $theme-color__blue8;
@@ -13,7 +13,6 @@
   background-color: $theme-color__blue6;
   color: $theme-color__white;
   font-size: $font-size--md;
-  transition-duration: 0.3s;
 
   &:hover {
     background-color: $theme-color__blue7;
@@ -23,4 +22,22 @@
   &:active {
     background-color: $theme-color__blue6;
   }
+}
+
+.callToAction__menu {
+  position: absolute;
+  background-color: $theme-color__blue7;
+  width: 100%;
+}
+
+.callToAction__menuItem {
+  padding: $padding--md;
+  color: $theme-color__white;
+}
+
+.ddWrapper {
+  position: relative;
+  width: 150px;
+  margin-right: $margin--sm;
+  transition-duration: 0.3s;
 }
