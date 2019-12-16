@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./CallToAction.scss";
-import DropdownApp from "./DropdownApp";
+import DropDown from "../DropDown/DropDown";
 
 export default class CallToAction extends React.Component {
 
@@ -14,20 +14,9 @@ export default class CallToAction extends React.Component {
 
     render () {return (
         <div className={styles.callToAction}>
-            <div className={styles.ddWrapper}>
-                <div className={styles.callToAction__button} onMouseOver={this.toggleMenuVisibility} onMouseLeave={this.toggleMenuVisibility}>Hello</div>
-                <ul className={styles.callToAction__menu} hidden={this.state.isMenuHidden}>
-                    <li className={styles.callToAction__menuItem}>Illinois</li>
-                    <li className={styles.callToAction__menuItem}>Florinda</li>
-                    <li className={styles.callToAction__menuItem}>Wisconsin</li>
-                </ul>
-            </div>
-            <div className={styles.ddWrapper}>
-                <div className={styles.callToAction__button}>Apply</div>
-            </div>
-            <div className={styles.ddWrapper}>
-                <div className={styles.callToAction__button}>Register</div>
-            </div>
+            <DropDown title="Visit" menuItems={["Des Plaines", "Skokie", "Virtual"]}/>
+            <DropDown title="Apply" menuItems={["On-Campus", "On-line", "Hybrid"]}/>
+            <DropDown title="Register" menuItems={["In-Person", "On-line", "Hybrid"]}/>
         </div>
     )}
 }

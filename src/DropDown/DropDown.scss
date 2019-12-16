@@ -1,0 +1,44 @@
+@import "../variables";
+
+.DropDown{
+  position: relative;
+  width: 170px;
+  margin-right: $margin--md;
+  font-family: $font-style--sanserif;
+}
+
+.DropDown__Heading {
+  border-radius: 2px;
+  border: none;
+  border-top: solid 1px $theme-color__blue8;
+  padding: $padding--sm $padding--md;
+  background-color: $theme-color__blue6;
+  color: $theme-color__white;
+  font-size: $font-size--md;
+}
+
+.DropDown__Menu {
+  width: 100%;
+  position: absolute;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: $theme-color__blue7;
+  box-shadow: 0 2px 5px -1px $theme-color__blue8;
+}
+
+.DropDown__Item {
+  padding: $padding--md;
+  color: $theme-color__white;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+
+  &:hover {
+    background-color: $theme-color__blue6;
+  }
+
+  &:active {
+    background-color: $theme-color__blue8;
+  }
+
+
+}
