@@ -1,10 +1,13 @@
 @import "../variables";
 
 .DropDown{
-  position: relative;
-  width: 170px;
   margin-right: $margin--md;
   font-family: $font-style--sanserif;
+
+  &:hover .DropDown__Menu {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .DropDown__Heading {
@@ -18,12 +21,13 @@
 }
 
 .DropDown__Menu {
-  width: 100%;
   position: absolute;
+  opacity: 0;
+  visibility: hidden;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   background-color: $theme-color__blue7;
-  box-shadow: 0 2px 5px -1px $theme-color__blue8;
+  transition: visibility 0.3s, opacity 0.3s;
 }
 
 .DropDown__Item {
@@ -39,6 +43,9 @@
   &:active {
     background-color: $theme-color__blue8;
   }
+}
 
-
+.DropDown__Link {
+  text-decoration: none;
+  color: $theme-color__white;
 }
