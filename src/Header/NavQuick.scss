@@ -1,9 +1,10 @@
 @import "../variables";
 
 .navQuick {
-  margin-left: auto;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
+  flex: 1 1 auto;
 }
 
 .navQuick__link {
