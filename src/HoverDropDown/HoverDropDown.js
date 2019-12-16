@@ -7,7 +7,7 @@ export default function HoverDropDown(props) {
             <div className={styles.DropDown__Heading}>{props.title}</div>
             <ul className={styles.DropDown__Menu}>
                 {Object.keys(props.menuItems).map((key, index) => (
-                    <a className={styles.DropDown__Link} href={props.menuItems[key]}><li key={index} className={styles.DropDown__Item}>{key}</li></a>))}
+                    <a className={styles.DropDown__Link} href={props.menuItems[key]} key={index}><li  className={styles.DropDown__Item}>{key}</li></a>))}
             </ul>
         </div>
     )
