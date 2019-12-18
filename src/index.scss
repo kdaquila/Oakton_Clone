@@ -1,7 +1,82 @@
+@import "./variables";
+
 .page {
+  background-color: $theme-color__blue5;
+}
+
+.page__content {
+  width: 80%;
+  margin: 0 auto;
+  background-color: $theme-color__white;
+}
+
+@media only screen and (max-width: 1300px){
+  .page__content {
+    width: 100%;
+    margin: 0 auto;
+    background-color: $theme-color__white;
+  }
 
 }
 
-.page-content {
+.hero {
+  width: 100%;
+  padding: $padding--sm;
+}
 
+%hero__item {
+  height: 400px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero__item_1 {
+  @extend %hero__item;
+  background-position: center 25%;
+  background-image: url("./images/roman-pohorecki-k7XWLQN-f9g-unsplash_withTextOverlay.png");
+}
+
+.hero__item_2 {
+  @extend %hero__item;
+  background-position: center 75%;
+  background-image: url("./images/ray-hennessy-gdTxVSAE5sk-unsplash_withTextOverlay.png");
+}
+
+.hero__item_3 {
+  @extend %hero__item;
+  background-position: center center;
+  background-image: url("./images/adi-goldstein-Hli3R6LKibo-unsplash_withTextOverlay.png");
+}
+
+.hero__caption {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  padding: $padding--md;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.75);
+  color: $theme-color__white;
+}
+
+.hero__captionText {
+  padding: 0 $padding--md;
+  font-size: $font-size--lg;
+  font-family: $font-style--serif;
+  text-align: center;
+}
+
+.hero__captionText_emphasis {
+  @extend .hero__captionText;
+  border-left: 1px solid $theme-color__gold;
+  font-family: $font-style--sanserif;
+  color: $theme-color__gold;
+
+  a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+  }
 }

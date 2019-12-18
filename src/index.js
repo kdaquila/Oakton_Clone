@@ -5,6 +5,12 @@ import ReactDOM from "react-dom";
 // global style imports
 import "./_reset.scss";
 
+// local style import
+import styles from "./index.scss";
+
+// Image imports
+import mountainsAndSky from "./images/roman-pohorecki-k7XWLQN-f9g-unsplash.jpg";
+
 // My Component imports
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
@@ -13,37 +19,28 @@ import CardSlider from "./CardSlider/CardSlider";
 
 function App() {
     return (
-        <div className="page">
-            <div className="page__content">
+        <div className={styles.page}>
+            <div className={styles.page__content}>
                 <Header/>
-                <ImageSlider className="hero">
-                    <div className="hero__item">
-                        <img className="hero__image" src="./images/roman-pohorecki-k7XWLQN-f9g-unsplash.jpg"
-                             alt="mountains and sky"/>
-                        <div className="hero__caption">
-                            <p className="hero__caption-text">Wrap up some college credit.</p>
-                            <p className="hero__caption-text--emphasis">Winterim classes begin Dec. 16</p>
-                            <p className="hero__caption-text--emphasis"><a className="hero__caption-link" href="#">Register
-                                now.</a></p>
+                <ImageSlider>
+                    <div className={styles.hero__item_1}>
+                        <div className={styles.hero__caption}>
+                            <p className={styles.hero__captionText}>Wrap up some college credit.</p>
+                            <p className={styles.hero__captionText_emphasis}><a className="hero__caption-link" href="#">Winterim classes begin December 16th</a></p>
+                            <p className={styles.hero__captionText_emphasis}><a className="hero__caption-link" href="#">Register now</a></p>
                         </div>
                     </div>
-                    <div className="hero__item">
-                        <img className="hero__image" src="./images/brigitte-tohm-SD2FxgKDAGk-unsplash.jpg"
-                             alt="sparklers"/>
-                        <div className="hero__caption">
-                            <p className="hero__caption-text">Making resolutions?</p>
-                            <p className="hero__caption-text--emphasis">Take a class at Oakton!</p>
-                            <p className="hero__caption-text--emphasis"><a className="hero__caption-link" href="#">Classes
-                                being Jan 21. Apply Now.</a></p>
+                    <div className={styles.hero__item_2}>
+                        <div className={styles.hero__caption}>
+                            <p className={styles.hero__captionText}>Making resolutions?</p>
+                            <p className={styles.hero__captionText_emphasis}><a className="hero__caption-link" href="#">Take a class at Oakton, starting January 21 s!</a></p>
+                            <p className={styles.hero__captionText_emphasis}><a className="hero__caption-link" href="#">Apply Now</a></p>
                         </div>
                     </div>
-                    <div className="hero__item">
-                        <img className="hero__image" src="./images/adi-goldstein-Hli3R6LKibo-unsplash.jpg"
-                             alt="ballons"/>
-                        <div className="hero__caption">
-                            <p className="hero__caption-text">Oakton's 50th Anniversary</p>
-                            <p className="hero__caption-text--emphasis"><a className="hero__caption-link" href="#">1969
-                                &ndash 2019 Timeline</a></p>
+                    <div className={styles.hero__item_3}>
+                        <div className={styles.hero__caption}>
+                            <p className={styles.hero__captionText}>Oakton's 50th Anniversary</p>
+                            <p className={styles.hero__captionText_emphasis}><a className="hero__caption-link" href="#">1969 &ndash; 2019 Timeline</a></p>
                         </div>
                     </div>
                 </ImageSlider>
