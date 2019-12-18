@@ -8,8 +8,9 @@
 }
 
 .navQuick__link {
-  margin-right: $margin--md;
+  margin-right: $margin--sm;
   padding: $padding--sm 0;
+  font-size: $font-size--sm;
   font-family: $font-style--sanserif;
   color: $theme-color__white;
   text-decoration: none;

@@ -1,4 +1,7 @@
+@import "../variables";
+
 .callToAction {
   display: flex;
   align-items: center;
+  padding: $padding--sm 0;
 }

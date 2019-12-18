@@ -9,8 +9,8 @@
 .search__input {
   box-sizing: border-box;
   width: 300px;
-  height: 40px;
-  font-size: $font-size--md;
+  height: 30px;
+  font-size: $font-size--sm;
   font-family: $font-style--sanserif;
   text-indent: 20px;
 }
@@ -18,8 +18,7 @@
 .search__button {
   box-sizing: border-box;
   width: 40px;
-  height: 40px;
-  padding: $padding--sm;
+  height: 30px;
   background-color: $theme-color__green;
   color: $theme-color__white;
   font-family: FontAwesome, serif;
@@ -28,11 +27,13 @@
 }
 
 .search__icon {
+  font-size: $font-size--sm;
   @extend .fa;
   @extend .fa-search;
+
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1000px) {
   .search__input {
     display: none;
   }

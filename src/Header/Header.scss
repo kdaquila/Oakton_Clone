@@ -5,3 +5,61 @@
   padding: $padding--md 0;
   background-color: $theme-color__blue5;
 }
+
+.header__row2 {
+  display: flex;
+  align-items: center;
+  background-color: $theme-color__white;
+}
+
+.logo {
+  margin-left: $padding--lg;
+  margin-right: auto;
+  height: 80px;
+}
+
+.rolesList {
+  margin: $margin--md $margin--md;
+  border-left: 1px solid $gray5;
+  padding-left: $padding--sm;
+}
+
+.rolesList__item {
+  margin: $margin--sm;
+
+  a {
+    color: $theme-color__green;
+    font-family: $font-style--sanserif;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.navBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $theme-color__green;
+}
+
+.navBar__item {
+  flex: 1 1 auto;
+  text-align: center;
+  padding: $padding--md $padding--sm;
+
+  &:hover {
+    background-color: $theme-color__gold;
+  }
+
+  a {
+    color: $theme-color__white;
+    font-size: $font-size--sm;
+    font-family: $font-style--sanserif;
+    text-decoration: none;
+  }
+}
