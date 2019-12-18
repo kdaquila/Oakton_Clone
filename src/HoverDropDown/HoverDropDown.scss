@@ -1,51 +1,26 @@
 @import "../variables";
 
-.DropDown{
-  margin-right: $margin--sm;
-  font-family: $font-style--sanserif;
+.baseComponent{
+  z-index: 1000;
 
-  &:hover .DropDown__Menu {
+  &:hover .baseMenu {
     opacity: 1;
     visibility: visible;
   }
 }
 
-.DropDown__Heading {
-  border-radius: 2px;
-  border: none;
-  border-top: solid 1px $theme-color__blue8;
-  padding: $padding--sm $padding--md;
-  background-color: $theme-color__blue6;
-  color: $theme-color__white;
-  font-size: $font-size--sm;
+.baseHeading {
 }
 
-.DropDown__Menu {
+.baseMenu {
   position: absolute;
   opacity: 0;
   visibility: hidden;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  background-color: $theme-color__blue7;
   transition: visibility 0.3s, opacity 0.3s;
 }
 
-.DropDown__Item {
-  padding: $padding--md;
-  color: $theme-color__white;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-
-  &:hover {
-    background-color: $theme-color__blue6;
-  }
-
-  &:active {
-    background-color: $theme-color__blue8;
-  }
+.baseItem {
 }
 
-.DropDown__Link {
-  text-decoration: none;
-  color: $theme-color__white;
+.baseLink {
 }

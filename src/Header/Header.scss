@@ -1,4 +1,5 @@
 @import "../variables";
+@import "../../node_modules/@fortawesome/fontawesome-free/css/fontawesome";
 
 .header__row1 {
   display: flex;
@@ -63,3 +64,115 @@
     text-decoration: none;
   }
 }
+
+.callToAction {
+  display: flex;
+  align-items: center;
+  padding: $padding--sm 0;
+}
+
+.callToActionWidget {
+  margin-right: $margin--sm;
+  font-family: $font-style--sanserif;
+}
+
+.callToActionWidget__heading {
+  border-radius: 2px;
+  border: none;
+  border-top: solid 1px $theme-color__blue8;
+  padding: $padding--sm $padding--md;
+  background-color: $theme-color__blue6;
+  color: $theme-color__white;
+  font-size: $font-size--sm;
+}
+
+.callToActionWidget__menu {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: $theme-color__blue7;
+}
+
+.callToActionWidget__link {
+  text-decoration: none;
+  color: $theme-color__white;
+}
+
+.callToActionWidget__item {
+  padding: $padding--md;
+  color: $theme-color__white;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+
+  &:hover {
+    background-color: $theme-color__blue6;
+  }
+
+  &:active {
+    background-color: $theme-color__blue8;
+  }
+}
+
+
+
+.quickNav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+.quickNav__link {
+  margin-right: $margin--sm;
+  padding: $padding--sm 0;
+  font-size: $font-size--sm;
+  font-family: $font-style--sanserif;
+  color: $theme-color__white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search__input {
+  box-sizing: border-box;
+  width: 300px;
+  height: 30px;
+  font-size: $font-size--sm;
+  font-family: $font-style--sanserif;
+  text-indent: 20px;
+}
+
+.search__button {
+  box-sizing: border-box;
+  width: 40px;
+  height: 30px;
+  background-color: $theme-color__green;
+  color: $theme-color__white;
+  font-family: FontAwesome, serif;
+  font-size: $font-size--md;
+  border-width: 1px;
+}
+
+.search__icon {
+  font-size: $font-size--sm;
+  @extend .fa;
+  @extend .fa-search;
+
+}
+
+@media only screen and (max-width: 1000px) {
+  .search__input {
+    display: none;
+  }
+}
+
+.red {
+  border: 1px solid red;
+}
+
