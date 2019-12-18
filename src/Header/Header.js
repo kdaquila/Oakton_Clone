@@ -25,7 +25,9 @@ export default function Header() {
                 </form>
             </div>
             <div className={s['header__row2']}>
-                <img className={s['logo']} src={logo} alt="oakton logo"/>
+                <a className={s['logo__link']} href="#">
+                    <img className={s['logo__img']} src={logo} alt="oakton logo"/>
+                </a>
                 <ul className={s['roleNav']}>
                     <li className={s['roleNav__item']}><a href="#">New Students</a></li>
                     <li className={s['roleNav__item']}><a href="#">Current Students</a></li>
