@@ -19,13 +19,13 @@
   height: 80px;
 }
 
-.rolesList {
+.roleNav {
   margin: $margin--md $margin--md;
   border-left: 1px solid $gray5;
   padding-left: $padding--sm;
 }
 
-.rolesList__item {
+.roleNav__item {
   margin: $margin--sm;
 
   a {
@@ -73,46 +73,23 @@
 
 .callToActionWidget {
   margin-right: $margin--sm;
-  font-family: $font-style--sanserif;
-}
-
-.callToActionWidget__heading {
   border-radius: 2px;
   border: none;
   border-top: solid 1px $theme-color__blue8;
   padding: $padding--sm $padding--md;
   background-color: $theme-color__blue6;
   color: $theme-color__white;
+  font-family: $font-style--sanserif;
   font-size: $font-size--sm;
-}
-
-.callToActionWidget__menu {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  background-color: $theme-color__blue7;
-}
-
-.callToActionWidget__link {
-  text-decoration: none;
-  color: $theme-color__white;
-}
-
-.callToActionWidget__item {
-  padding: $padding--md;
-  color: $theme-color__white;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
 
   &:hover {
-    background-color: $theme-color__blue6;
+    background-color: $theme-color__blue7;
   }
 
   &:active {
-    background-color: $theme-color__blue8;
+    background-color: $theme-color__blue6;
   }
 }
-
-
 
 .quickNav {
   display: flex;
