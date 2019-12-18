@@ -33,7 +33,7 @@ function App() {
                     <div className={styles.hero__item_2}>
                         <div className={styles.hero__caption}>
                             <p className={styles.hero__captionText}>Making resolutions?</p>
-                            <p className={styles.hero__captionText_emphasis}><a className="hero__caption-link" href="#">Take a class at Oakton, starting January 21 s!</a></p>
+                            <p className={styles.hero__captionText_emphasis}><a className="hero__caption-link" href="#">Take a class at Oakton!</a></p>
                             <p className={styles.hero__captionText_emphasis}><a className="hero__caption-link" href="#">Apply Now</a></p>
                         </div>
                     </div>

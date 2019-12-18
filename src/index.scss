@@ -5,7 +5,7 @@
 }
 
 .page__content {
-  width: 80%;
+  width: 67%;
   margin: 0 auto;
   background-color: $theme-color__white;
 }
@@ -33,19 +33,19 @@
 
 .hero__item_1 {
   @extend %hero__item;
-  background-position: center 25%;
+  background-position: left 25%;
   background-image: url("./images/roman-pohorecki-k7XWLQN-f9g-unsplash_withTextOverlay.png");
 }
 
 .hero__item_2 {
   @extend %hero__item;
-  background-position: center 75%;
+  background-position: left 75%;
   background-image: url("./images/ray-hennessy-gdTxVSAE5sk-unsplash_withTextOverlay.png");
 }
 
 .hero__item_3 {
   @extend %hero__item;
-  background-position: center center;
+  background-position: left center;
   background-image: url("./images/adi-goldstein-Hli3R6LKibo-unsplash_withTextOverlay.png");
 }
 

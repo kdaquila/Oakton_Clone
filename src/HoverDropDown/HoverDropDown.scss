@@ -1,7 +1,7 @@
 @import "../variables";
 
 .DropDown{
-  margin-right: $margin--md;
+  margin-right: $margin--sm;
   font-family: $font-style--sanserif;
 
   &:hover .DropDown__Menu {
@@ -17,7 +17,7 @@
   padding: $padding--sm $padding--md;
   background-color: $theme-color__blue6;
   color: $theme-color__white;
-  font-size: $font-size--md;
+  font-size: $font-size--sm;
 }
 
 .DropDown__Menu {
