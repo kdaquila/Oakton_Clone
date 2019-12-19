@@ -33,13 +33,13 @@
 
 .hero__item_1 {
   @extend %hero__item;
-  background-position: left 25%;
+  background-position: left top;
   background-image: url("./images/roman-pohorecki-k7XWLQN-f9g-unsplash_withTextOverlay.png");
 }
 
 .hero__item_2 {
   @extend %hero__item;
-  background-position: left 75%;
+  background-position: left top;
   background-image: url("./images/ray-hennessy-gdTxVSAE5sk-unsplash_withTextOverlay.png");
 }
 
@@ -79,4 +79,96 @@
     text-decoration: none;
     text-align: left;
   }
+}
+
+.main {
+  display: flex;
+}
+
+.main__col1 {
+  flex: 0 0 auto;
+  padding: $padding--sm 0;
+  background-color: $gray6;
+}
+
+.main__col2 {
+  flex: 1 1 auto;
+}
+
+.explore {
+}
+
+.explore__heading {
+  padding: $padding1 $padding4;
+  font-size: $font-size--md;
+}
+
+.explore__item {
+  border-top: 2px solid $theme-color__white;
+  padding: $padding2 $padding4;
+  background-color: $gray5;
+  color: $theme-color__blue6;
+  font-family: $font-style--sanserif;
+  font-size: $font-size--sm;
+
+  &:last-child {
+    border-bottom: 2px solid $theme-color__white;
+  }
+
+  &:hover {
+    background-color: $gray6;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.spotlight {
+  display: flex;
+  margin: $margin2;
+  background-color: $gray6;
+}
+
+.spotlight__col2 {
+  padding: $padding1 $padding3;
+}
+
+.spotlight__image {
+  display: block;
+  height: 200px;
+  border: 10px solid $theme-color__blue6;
+}
+
+.spotlight__title {
+  font-size: $font-size--md;
+  color: $gray2;
+}
+
+.spotlight__heading {
+  margin: $margin4 0;
+  color: $theme-color__blue5;
+  font-size: $font-size--md;
+}
+
+.spotlight__button {
+  margin-top: $margin2;
+  border: none;
+  border-top: 1px solid $theme-color__blue8;
+  border-bottom: 1px solid $theme-color__blue5;
+  padding: $padding2 $padding4;
+  background-color: $theme-color__blue6;
+  color: $theme-color__white;
+
+  &:hover {
+    background-color: $theme-color__blue6;
+  }
+}
+
+.spotlight__text {
+  font-size: $font-size--sm;
+  font-family: $font-style--sanserif;
+  color: $gray2;
+  line-height: $font-size--sm*1.5;
 }

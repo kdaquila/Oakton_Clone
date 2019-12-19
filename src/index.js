@@ -6,10 +6,10 @@ import ReactDOM from "react-dom";
 import "./_reset.scss";
 
 // local style import
-import styles from "./index.scss";
+import s from "./index.scss";
 
-// Image imports
-import mountainsAndSky from "./images/roman-pohorecki-k7XWLQN-f9g-unsplash.jpg";
+// images
+import studentsInHallway from "./images/brad-neathery-XrSzacdYbtQ-unsplash.jpg";
 
 // My Component imports
 import Header from "./Header/Header";
@@ -19,68 +19,67 @@ import CardSlider from "./CardSlider/CardSlider";
 
 function App() {
     return (
-        <div className={styles.page}>
-            <div className={styles.page__content}>
+        <div className={s['page']}>
+            <div className={s['page__content']}>
                 <Header/>
                 <ImageSlider>
-                    <div className={styles.hero__item_1}>
-                        <div className={styles.hero__caption}>
-                            <p className={styles.hero__captionText}>Wrap up some college credit.</p>
-                            <p className={styles.hero__captionText_emphasis}><a className="hero__caption-link" href="#">Winterim classes begin December 16th</a></p>
-                            <p className={styles.hero__captionText_emphasis}><a className="hero__caption-link" href="#">Register now</a></p>
+                    <div className={s['hero__item_1']}>
+                        <div className={s['hero__caption']}>
+                            <p className={s['hero__captionText']}>Wrap up some college credit.</p>
+                            <p className={s['hero__captionText_emphasis']}><a className="hero__caption-link" href="#">Winterim classes begin December 16th</a></p>
+                            <p className={s['hero__captionText_emphasis']}><a className="hero__caption-link" href="#">Register now</a></p>
                         </div>
                     </div>
-                    <div className={styles.hero__item_2}>
-                        <div className={styles.hero__caption}>
-                            <p className={styles.hero__captionText}>Making resolutions?</p>
-                            <p className={styles.hero__captionText_emphasis}><a className="hero__caption-link" href="#">Take a class at Oakton!</a></p>
-                            <p className={styles.hero__captionText_emphasis}><a className="hero__caption-link" href="#">Apply Now</a></p>
+                    <div className={s['hero__item_2']}>
+                        <div className={s['hero__caption']}>
+                            <p className={s['hero__captionText']}>Making resolutions?</p>
+                            <p className={s['hero__captionText_emphasis']}><a className="hero__caption-link" href="#">Take a class at Oakton!</a></p>
+                            <p className={s['hero__captionText_emphasis']}><a className="hero__caption-link" href="#">Apply Now</a></p>
                         </div>
                     </div>
-                    <div className={styles.hero__item_3}>
-                        <div className={styles.hero__caption}>
-                            <p className={styles.hero__captionText}>Oakton's 50th Anniversary</p>
-                            <p className={styles.hero__captionText_emphasis}><a className="hero__caption-link" href="#">1969 &ndash; 2019 Timeline</a></p>
+                    <div className={s['hero__item_3']}>
+                        <div className={s['hero__caption']}>
+                            <p className={s['hero__captionText']}>Oakton's 50th Anniversary</p>
+                            <p className={s['hero__captionText_emphasis']}><a className="hero__caption-link" href="#">1969 &ndash; 2019 Timeline</a></p>
                         </div>
                     </div>
                 </ImageSlider>
-                <section className="main">
-                    <div className="main__col1">
-                        <div className="explore">
-                            <h1 className="explore__heading">EXPLORE</h1>
-                            <h2 className="explore__item"><a className="explore__link" href="#">Academic Calendar</a>
+                <section className={s['main']}>
+                    <div className={s['main__col1']}>
+                        <div className={s['explore']}>
+                            <h1 className={s['explore__heading']}>EXPLORE</h1>
+                            <h2 className={s['explore__item']}><a href="#">Academic Calendar</a>
                             </h2>
-                            <h2 className="explore__item"><a className="explore__link" href="#">Academic Credit
+                            <h2 className={s['explore__item']}><a href="#">Academic Credit
                                 Programs</a></h2>
-                            <h2 className="explore__item"><a className="explore__link" href="#">Class Schedules</a></h2>
-                            <h2 className="explore__item"><a className="explore__link" href="#">Class Search -
+                            <h2 className={s['explore__item']}><a href="#">Class Schedules</a></h2>
+                            <h2 className={s['explore__item']}><a href="#">Class Search -
                                 Credit</a></h2>
-                            <h2 className="explore__item"><a className="explore__link" href="#">College Catalog</a></h2>
-                            <h2 className="explore__item"><a className="explore__link" href="#">Financial Aid</a></h2>
-                            <h2 className="explore__item"><a className="explore__link" href="#">Honors</a></h2>
-                            <h2 className="explore__item"><a className="explore__link" href="#">Online Learning</a></h2>
-                            <h2 className="explore__item"><a className="explore__link" href="#">Register for Classes</a>
+                            <h2 className={s['explore__item']}><a href="#">College Catalog</a></h2>
+                            <h2 className={s['explore__item']}><a href="#">Financial Aid</a></h2>
+                            <h2 className={s['explore__item']}><a href="#">Honors</a></h2>
+                            <h2 className={s['explore__item']}><a href="#">Online Learning</a></h2>
+                            <h2 className={s['explore__item']}><a href="#">Register for Classes</a>
                             </h2>
-                            <h2 className="explore__item"><a className="explore__link" href="#">Scholarships</a></h2>
-                            <h2 className="explore__item"><a className="explore__link" href="#">Veterans Information</a>
+                            <h2 className={s['explore__item']}><a href="#">Scholarships</a></h2>
+                            <h2 className={s['explore__item']}><a href="#">Veterans Information</a>
                             </h2>
-                            <h2 className="explore__item"><a className="explore__link" href="#">Winterim Classes</a>
+                            <h2 className={s['explore__item']}><a href="#">Winterim Classes</a>
                             </h2>
                         </div>
                     </div>
-                    <div className="main__col2">
-                        <div className="spotlight">
+                    <div className={s["main__col2"]}>
+                        <div className={s['spotlight']}>
                             <div className="spotlight__col1">
-                                <img src="./images/brad-neathery-XrSzacdYbtQ-unsplash.jpg"
-                                     alt="students in the hallway"/>
+                                <img className={s['spotlight__image']} src={studentsInHallway} alt="students in the hallway"/>
                             </div>
-                            <div className="spotlight__col2">
-                                <h1 className="spotlight__title">SPOTLIGHT</h1>
-                                <h2 className="spotlight__heading">Spring Registration</h2>
-                                <p className="spotlight__text">Registration is open for spring classes. Spring semester
+                            <div className={s['spotlight__col2']}>
+                                <h1 className={s['spotlight__title']}>SPOTLIGHT</h1>
+                                <h2 className={s['spotlight__heading']}>Spring Registration</h2>
+                                <p className={s['spotlight__text']}>Registration is open for spring classes Spring semester
                                     begins Tuesday, January 21. Register in-person at either campus or online.</p>
                                 <a>
-                                    <button>Read More</button>
+                                    <button className={s['spotlight__button']}>Read More</button>
                                 </a>
                             </div>
                         </div>
@@ -89,7 +88,7 @@ function App() {
                                 <img className="opportunity__image" src="./images/ani-kolleshi-7jjnJ-QA9fY-unsplash.jpg"
                                      alt="woman inside laboratory"/>
                                 <h1 className="opportunity__heading">Health Careers Information Sessions</h1>
-                                <p className="opportunity__text">Health career opportunities are expanding rapidly. Learn more about your options.</p>
+                                <p className="opportunity__text">Health career opportunities are expanding rapidly. Learn more about your options</p>
                                 <button className="opportunity__button">View More</button>
                             </div>
                             <div className="opportunity__item">
@@ -114,7 +113,7 @@ function App() {
                                      alt="man working at a computer"/>
                                 <h1 className="opportunity__heading">Internships</h1>
                                 <p className="opportunity__text">Internships allow students to gain professional
-                                    experience, build résumés and explore careers.</p>
+                                    experience, build résumés and explore careers</p>
                                 <button className="opportunity__button">View More</button>
                             </div>
                             <div className="opportunity__item">
@@ -135,7 +134,7 @@ function App() {
                             <ul className="events__list">
                                 <li className="events__item">
                                     <h1 className="events__item-title"><a href="#">From Sorrow to Triumphant Joy: The Art of David Bekker</a></h1>
-                                    <p className="events__item-text">During the Great Depression, David Bekker was a Works Progress Administration (WPA) artist in Chicago where he produced images of human suffering and painted murals in Illinois public buildings. </p>
+                                    <p className="events__item-text">During the Great Depression, David Bekker was a Works Progress Administration (WPA) artist in Chicago where he produced images of human suffering and painted murals in Illinois public buildings </p>
                                 </li>
                                 <li className="events__item">
                                     <h1 className="events__item-title">Winter Break</h1>
