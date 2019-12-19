@@ -10,6 +10,11 @@ import s from "./index.scss";
 
 // images
 import studentsInHallway from "./images/brad-neathery-XrSzacdYbtQ-unsplash.jpg";
+import womanInMedLab from "./images/ani-kolleshi-7jjnJ-QA9fY-unsplash_reScale.png";
+import peopleAroundLaptop from "./images/mimi-thian-vdXMSiX-n6M-unsplash_reScale.png";
+import networkEquipment from "./images/thomas-jensen-UrtxBX5i5SE-unsplash_reScale.png";
+import manWorkingAtComputer from "./images/tim-van-der-kuip-CPs2X8JYmS8-unsplash_reScale.png";
+import peoplePlayingViolin from "./images/manuel-nageli-7CcPLtywRso-unsplash_reScale.png";
 
 // My Component imports
 import Header from "./Header/Header";
@@ -83,78 +88,74 @@ function App() {
                                 </a>
                             </div>
                         </div>
-                        <CardSlider className="opportunity">
-                            <div className="opportunity__item">
-                                <img className="opportunity__image" src="./images/ani-kolleshi-7jjnJ-QA9fY-unsplash.jpg"
-                                     alt="woman inside laboratory"/>
-                                <h1 className="opportunity__heading">Health Careers Information Sessions</h1>
-                                <p className="opportunity__text">Health career opportunities are expanding rapidly. Learn more about your options</p>
-                                <button className="opportunity__button">View More</button>
+                        <div className={s['opportunity']}>
+                            <h1 className={s['opportunity__title']}>OPPORTUNITIES</h1>
+                            <CardSlider className={s['opportunity__list']}>
+                                <div className={s['opportunity__item']}>
+                                    <img className={s['opportunity__image']} src={womanInMedLab} alt="woman inside laboratory"/>
+                                    <h1 className={s['opportunity__heading']}>Health Careers Information Sessions</h1>
+                                    <p className={s['opportunity__text']}>Health career opportunities are expanding rapidly. Learn more about your options</p>
+                                    <button className={s['opportunity__button']}>View More</button>
+                                </div>
+                                <div className={s['opportunity__item']}>
+                                    <img className={s['opportunity__image']} src={peopleAroundLaptop} alt="students gathered around computer"/>
+                                    <h1 className={s['opportunity__heading']}>Transfer Partnerships</h1>
+                                    <p className={s['opportunity__text']}>Partnerships provide students with benefits and ease of
+                                        transition to their respective college or university.</p>
+                                    <button className={s['opportunity__button']}>View More</button>
+                                </div>
+                                <div className={s['opportunity__item']}>
+                                    <img className={s['opportunity__image']} src={networkEquipment} alt="networking equipment"/>
+                                    <h1 className={s['opportunity__heading']}>STEM Scholars</h1>
+                                    <p className={s['opportunity__text']}>Program and scholarship designed for students with
+                                        financial need pursuing a degree or career in a STEM field.</p>
+                                    <button className={s['opportunity__button']}>View More</button>
+                                </div>
+                                <div className={s['opportunity__item']}>
+                                    <img className={s['opportunity__image']}  src={manWorkingAtComputer} alt="man working at a computer"/>
+                                    <h1 className={s['opportunity__heading']}>Internships</h1>
+                                    <p className={s['opportunity__text']}>Internships allow students to gain professional
+                                        experience, build résumés and explore careers</p>
+                                    <button className={s['opportunity__button']}>View More</button>
+                                </div>
+                                <div className={s['opportunity__item']}>
+                                    <img className={s['opportunity__image']} src={peoplePlayingViolin} alt="people playing violins"/>
+                                    <h1 className={s['opportunity__heading']}>Music</h1>
+                                    <p className={s['opportunity__text']}>Oakton's Music Department offers a variety of
+                                        performing opportunities and study with distinguished faculty.</p>
+                                    <button className={s['opportunity__button']}>View More</button>
+                                </div>
+                            </CardSlider>
+                        </div>
+                        <div className={s['events']}>
+                            <div className={s['events__header']}>
+                                <h1 className={s['events__title']}>EVENTS</h1>
+                                <a className={s['events__link']} href="#">More</a>
                             </div>
-                            <div className="opportunity__item">
-                                <img className="opportunity__image" src="./images/mimi-thian-vdXMSiX-n6M-unsplash.jpg"
-                                     alt="students gathered around computer"/>
-                                <h1 className="opportunity__heading">Transfer Partnerships</h1>
-                                <p className="opportunity__text">Partnerships provide students with benefits and ease of
-                                    transition to their respective college or university.</p>
-                                <button className="opportunity__button">View More</button>
-                            </div>
-                            <div className="opportunity__item">
-                                <img className="opportunity__image"
-                                     src="./images/thomas-jensen-UrtxBX5i5SE-unsplash.jpg" alt="networking equipment"/>
-                                <h1 className="opportunity__heading">STEM Scholars</h1>
-                                <p className="opportunity__text">Program and scholarship designed for students with
-                                    financial need pursuing a degree or career in a STEM field.</p>
-                                <button className="opportunity__button">View More</button>
-                            </div>
-                            <div className="opportunity__item">
-                                <img className="opportunity__image"
-                                     src="./images/tim-van-der-kuip-CPs2X8JYmS8-unsplash.jpg"
-                                     alt="man working at a computer"/>
-                                <h1 className="opportunity__heading">Internships</h1>
-                                <p className="opportunity__text">Internships allow students to gain professional
-                                    experience, build résumés and explore careers</p>
-                                <button className="opportunity__button">View More</button>
-                            </div>
-                            <div className="opportunity__item">
-                                <img className="opportunity__image"
-                                     src="./images/manuel-nageli-7CcPLtywRso-unsplash.jpg"
-                                     alt="people playing violins"/>
-                                <h1 className="opportunity__heading">Music</h1>
-                                <p className="opportunity__text">Oakton's Music Department offers a variety of
-                                    performing opportunities and study with distinguished faculty.</p>
-                                <button className="opportunity__button">View More</button>
-                            </div>
-                        </CardSlider>
-                        <div className="events">
-                            <div className="events__header">
-                                <h1 className="events__title">EVENTS</h1>
-                                <a className="events__header-link" href="#">SEE ALL EVENTS</a>
-                            </div>
-                            <ul className="events__list">
-                                <li className="events__item">
-                                    <h1 className="events__item-title"><a href="#">From Sorrow to Triumphant Joy: The Art of David Bekker</a></h1>
-                                    <p className="events__item-text">During the Great Depression, David Bekker was a Works Progress Administration (WPA) artist in Chicago where he produced images of human suffering and painted murals in Illinois public buildings </p>
+                            <ul className={s['events__list']}>
+                                <li className={s['events__item']}>
+                                    <h1 className={s['events__itemTitle']}><a href="#">From Sorrow to Triumphant Joy: The Art of David Bekker</a></h1>
+                                    <p className={s['events__itemText']}>During the Great Depression, David Bekker was a Works Progress Administration (WPA) artist in Chicago where he produced images of human suffering and painted murals in Illinois public buildings </p>
                                 </li>
-                                <li className="events__item">
-                                    <h1 className="events__item-title">Winter Break</h1>
-                                    <p className="events__item-text">Oakton Community College will be closed Tuesday, Dec. 24, 2019 through Wednesday, Jan. 1, 2020 for winter break.</p>
+                                <li className={s['events__item']}>
+                                    <h1 className={s['events__itemTitle']}><a href="#">Winter Break</a></h1>
+                                    <p className={s['events__itemText']}>Oakton Community College will be closed Tuesday, Dec. 24, 2019 through Wednesday, Jan. 1, 2020 for winter break.</p>
                                 </li>
-                                <li className="events__item">
-                                    <h1 className="events__item-title">Health Care Career Information Sessions</h1>
-                                    <p className="events__item-text">Students interested in pursuing a career in health care are invited to attend a free information session.</p>
+                                <li className={s['events__item']}>
+                                    <h1 className={s['events__itemTitle']}><a href="#">Health Care Career Information Sessions</a></h1>
+                                    <p className={s['events__itemText']}>Students interested in pursuing a career in health care are invited to attend a free information session.</p>
                                 </li>
-                                <li className="events__item">
-                                    <h1 className="events__item-title">Oakton’s Nursing Program Ranked No. 5 in the State</h1>
-                                    <p className="events__item-text">Over the last five years, Oakton has averaged a first-time pass rate of approximately 92 percent on the NCLEX. In 2018, that passing rate was an all-time high of 99 percent</p>
+                                <li className={s['events__item']}>
+                                    <h1 className={s['events__itemTitle']}><a href="#">Oakton’s Nursing Program Ranked No. 5 in the State</a></h1>
+                                    <p className={s['events__itemText']}>Over the last five years, Oakton has averaged a first-time pass rate of approximately 92 percent on the NCLEX. In 2018, that passing rate was an all-time high of 99 percent</p>
                                 </li>
-                                <li className="events__item">
-                                    <h1 className="events__item-title">Oakton Cross Country Runner Earns All-America Honors at Nationals</h1>
-                                    <p className="events__item-text">Souleya Ibrahim took 13th place in the 5K race with her time of 18:52. The freshman crossed the finish line ahead of more than 270 runners from across the country.</p>
+                                <li className={s['events__item']}>
+                                    <h1 className={s['events__itemTitle']}><a href="#">Oakton Cross Country Runner Earns All-America Honors at Nationals</a></h1>
+                                    <p className={s['events__itemText']}>Souleya Ibrahim took 13th place in the 5K race with her time of 18:52. The freshman crossed the finish line ahead of more than 270 runners from across the country.</p>
                                 </li>
-                                <li className="events__item">
-                                    <h1 className="events__item-title">Jacqueline Saper</h1>
-                                    <p className="events__item-text">Author of "From Miniskirt to Hijab: A Girl in Revolutionary Iran." A Chicago Writers Series event.</p>
+                                <li className={s['events__item']}>
+                                    <h1 className={s['events__itemTitle']}><a href="#">Jacqueline Saper</a></h1>
+                                    <p className={s['events__itemText']}>Author of "From Miniskirt to Hijab: A Girl in Revolutionary Iran." A Chicago Writers Series event.</p>
                                 </li>
                             </ul>
                         </div>

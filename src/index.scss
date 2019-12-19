@@ -10,7 +10,7 @@
   background-color: $theme-color__white;
 }
 
-@media only screen and (max-width: 1300px){
+@media only screen and (max-width: 1400px){
   .page__content {
     width: 100%;
     margin: 0 auto;
@@ -171,4 +171,118 @@
   font-family: $font-style--sanserif;
   color: $gray2;
   line-height: $font-size--sm*1.5;
+}
+
+.opportunity {
+}
+
+.opportunity__title {
+  margin: $margin4 $margin2 $margin2;
+  font-size: $font-size--md;
+  color: $gray2;
+}
+
+.opportunity__list {
+  width: 90%;
+  margin: $margin1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.opportunity__item {
+  width: 200px;
+  margin: $margin1 $margin2 $margin1 $margin1;
+  display: flex;
+  flex-direction: column;
+}
+
+.opportunity__image {
+  width: 100%;
+}
+
+.opportunity__heading {
+  margin-top: $margin1;
+  color: $theme-color__blue6;
+  font-family: $font-style--sanserif;
+  font-size: $font-size--md;
+}
+
+.opportunity__text {
+  margin-top: $margin1;
+  color: $gray3;
+  font-family: $font-style--sanserif;
+  font-size: $font-size--sm;
+  flex: 1 1 auto;
+}
+
+.opportunity__button {
+  width: 100%;
+  margin-top: $margin1;
+  border: none;
+  border-top: 1px solid $theme-color__blue8;
+  border-bottom: 1px solid $theme-color__blue5;
+  padding: $padding2 $padding4;
+  background-color: $theme-color__blue6;
+  color: $theme-color__white;
+
+  &:hover {
+    background-color: $theme-color__blue7;
+  }
+
+  &:active {
+    background-color: $theme-color__blue8;
+  }
+}
+
+.events {
+  width: 95%;
+  margin: $margin1;
+}
+
+.events__header {
+  display: flex;
+  align-items: baseline;
+}
+
+.events__title {
+  font-size: $font-size--md;
+  color: $gray2;
+  margin: $margin4 $margin2 $margin2;
+}
+
+.events__link {
+  color: $theme-color__blue6;
+  font-size: $font-size--sm;
+  text-decoration: none;
+}
+
+.events__list {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.events__item {
+  width: 50%;
+  margin: $margin2 $margin1;
+}
+
+.events__itemTitle {
+  color: $theme-color__blue6;
+  font-size: $font-size--md;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.events__itemText {
+  font-size: $font-size--sm;
+  line-height: $font-size--sm * 1.5;
 }
