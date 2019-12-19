@@ -23,14 +23,14 @@ import ImageSlider from "./ImageSlider/ImageSlider";
 import CardSlider from "./CardSlider/CardSlider";
 
 function App() {
-    return (
+    return ([
+        <Header/>,
         <div className={s['page']}>
             <div className={s['page__content']}>
-                <Header/>
                 <ImageSlider>
                     <div className={s['hero__item_1']}>
                         <div className={s['hero__caption']}>
-                            <p className={s['hero__captionText']}>Wrap up some college credit.</p>
+                            <p className={s['hero__captionText']}>Finish college credits!</p>
                             <p className={s['hero__captionText_emphasis']}><a className="hero__caption-link" href="#">Winterim classes begin December 16th</a></p>
                             <p className={s['hero__captionText_emphasis']}><a className="hero__caption-link" href="#">Register now</a></p>
                         </div>
@@ -161,10 +161,10 @@ function App() {
                         </div>
                     </div>
                 </section>
-                <Footer/>
             </div>
-        </div>
-    )
+        </div>,
+        <Footer/>
+    ])
 }
 
 ReactDOM.render(<App/>, document.getElementById("app"));

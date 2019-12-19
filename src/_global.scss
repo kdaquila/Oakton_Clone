@@ -1,0 +1,17 @@
+@import "./variables";
+
+
+.page__content {
+  width: 67%;
+  margin: 0 auto;
+  background-color: $theme-color__white;
+}
+
+@media only screen and (max-width: 1400px){
+  .page__content {
+    width: 100%;
+    margin: 0 auto;
+    background-color: $theme-color__white;
+  }
+
+}

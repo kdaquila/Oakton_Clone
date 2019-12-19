@@ -1,0 +1,58 @@
+@import "../variables";
+@import "../global";
+
+.page {
+  background: $theme-color__blue4;
+}
+
+.footer {
+  background-color: $theme-color__blue4;
+  padding: $padding8 $padding4;
+  font-size: $font-size--sm;
+  font-family: $font-style--sanserif;
+  color: $theme-color__white;
+}
+
+.footer__row1 {
+  display: flex;
+  align-items: center;
+  //border: 1px solid red;
+}
+
+.footer__row2 {
+  display: flex;
+  justify-content: flex-end;
+  margin: $margin4 0;
+}
+
+.footer__logo {
+  height: 75px;
+  margin-bottom: 10px;
+}
+
+.footer__address {
+  padding-left: $padding8;
+}
+
+.footer__addressHeading {
+  font-size: $font-size--md;
+  margin: $margin2 0;
+}
+
+.footer__addressText {
+}
+
+.footer__nav {
+  margin-left: auto;
+  border-left: 1px solid $theme-color__white;
+  border-right: 1px solid $theme-color__white;
+  padding: $padding4;
+}
+
+.footer__navItem {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+

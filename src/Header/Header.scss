@@ -1,10 +1,15 @@
 @import "../variables";
+@import "../global";
 @import "../../node_modules/@fortawesome/fontawesome-free/css/fontawesome";
+
+.page {
+  background: $theme-color__blue6;
+}
 
 .header__row1 {
   display: flex;
   padding: $padding--md 0;
-  background-color: $theme-color__blue5;
+  background-color: $theme-color__blue6;
 }
 
 .header__row2 {
