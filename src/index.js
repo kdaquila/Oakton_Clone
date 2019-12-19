@@ -20,7 +20,6 @@ import peoplePlayingViolin from "./images/manuel-nageli-7CcPLtywRso-unsplash_reS
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import ImageSlider from "./ImageSlider/ImageSlider";
-import CardSlider from "./CardSlider/CardSlider";
 
 function App() {
     return ([
@@ -90,7 +89,7 @@ function App() {
                         </div>
                         <div className={s['opportunity']}>
                             <h1 className={s['opportunity__title']}>OPPORTUNITIES</h1>
-                            <CardSlider className={s['opportunity__list']}>
+                            <div className={s['opportunity__list']}>
                                 <div className={s['opportunity__item']}>
                                     <img className={s['opportunity__image']} src={womanInMedLab} alt="woman inside laboratory"/>
                                     <h1 className={s['opportunity__heading']}>Health Careers Information Sessions</h1>
@@ -125,7 +124,7 @@ function App() {
                                         performing opportunities and study with distinguished faculty.</p>
                                     <button className={s['opportunity__button']}>View More</button>
                                 </div>
-                            </CardSlider>
+                            </div>
                         </div>
                         <div className={s['events']}>
                             <div className={s['events__header']}>

@@ -59,6 +59,10 @@
   font-family: $font-style--sanserif;
   color: $theme-color__gold;
 
+  &:hover {
+    text-decoration: underline;
+  }
+
   a {
     color: inherit;
     font-weight: bold;
@@ -148,7 +152,7 @@
   color: $theme-color__white;
 
   &:hover {
-    background-color: $theme-color__blue6;
+    background-color: $theme-color__blue7;
   }
 }
 
