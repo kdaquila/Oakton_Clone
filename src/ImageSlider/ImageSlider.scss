@@ -1,3 +1,119 @@
+@import "../variables";
+
 .image-slider {
 
+}
+
+.hero {
+  width: 100%;
+  height: 400px;
+  position:relative;
+  overflow: hidden;
+}
+
+%hero__item {
+  position: absolute;
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: none;
+}
+.hero__item_0 {
+  @extend %hero__item;
+  background-position: left top;
+  background-image: url("../images/roman-pohorecki-k7XWLQN-f9g-unsplash_withTextOverlay.png");
+}
+
+.hero__item_1 {
+  @extend %hero__item;
+  background-position: left top;
+  background-image: url("../images/ray-hennessy-gdTxVSAE5sk-unsplash_withTextOverlay.png");
+}
+
+.hero__item_2 {
+  @extend %hero__item;
+  background-position: left center;
+  background-image: url("../images/adi-goldstein-Hli3R6LKibo-unsplash_withTextOverlay.png");
+}
+
+.hero__item--standby {
+  right: 100%;
+}
+
+.hero__item--active {
+  left: 0;
+}
+
+.hero__item--primedEnterLeft {
+  right: 100%;
+}
+
+.hero__item--primedEnterRight {
+  left: 100%;
+}
+
+.hero__item--moveEnterLeft {
+  right: 0;
+  transition: right 1s;
+}
+
+.hero__item--moveEnterRight {
+  left: 0;
+  transition: left 1s;
+}
+
+.hero__item--primedExitLeft {
+  right: 0;
+  transition: right 1s;
+}
+
+.hero__item--primedExitRight {
+  left: 0;
+}
+
+.hero__item--moveExitLeft {
+  right: 100%;
+  transition: right 1s;
+}
+
+.hero__item--moveExitRight {
+  left: 100%;
+  transition: left 1s;
+}
+
+.hero__caption {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  padding: $padding--md;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.75);
+  color: $theme-color__white;
+}
+
+.hero__captionText {
+  padding: 0 $padding--md;
+  font-size: $font-size--lg;
+  font-family: $font-style--serif;
+  text-align: center;
+}
+
+.hero__captionText_emphasis {
+  @extend .hero__captionText;
+  border-left: 1px solid $theme-color__gold;
+  font-family: $font-style--sanserif;
+  color: $theme-color__gold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: left;
+  }
 }
