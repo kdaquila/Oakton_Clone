@@ -20,7 +20,6 @@ import peoplePlayingViolin from "./images/manuel-nageli-7CcPLtywRso-unsplash_reS
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import ImageSlider from "./ImageSlider/ImageSlider";
-import AbstractCarousel from "./AbstractCarousel/AbstractCarousel";
 
 function App() {
     return (
