@@ -1,6 +1,8 @@
 import React from "react";
 import s from "./Header.scss";
 import logo from "../images/oakton_logo_header.jpg";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faSearch} from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
     return (
@@ -22,7 +24,7 @@ export default function Header() {
                         <form className={s['search']} action="" method="get">
                             <input className={s['search__input']} type="text" name="query" id="query" placeholder="Custom Search"/>
                             <button className={s['search__button']} type="submit">
-                                <span className={s['search__icon']}/>
+                                <FontAwesomeIcon icon={faSearch} />
                             </button>
                         </form>
                     </div>
