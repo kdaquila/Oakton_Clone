@@ -106,10 +106,16 @@ $slider-duration: 0.5s;
   }
 }
 
+.hero__controlBar {
+  position: relative;
+  width: 100%;
+  right: 0;
+  top: 0;
+}
+
 .hero__goToControls {
   position: absolute;
   right: 0;
-  top: 0;
   z-index: 21;
   font-size: 20px;
   display: flex;
@@ -164,6 +170,11 @@ $slider-duration: 0.5s;
     color: $gray3;
   }
 }
+
+.hero__playPauseButton {
+  @extend %hero__goToControlButton;
+}
+
 
 @keyframes enterRight {
   from {

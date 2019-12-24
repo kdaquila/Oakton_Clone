@@ -3,7 +3,9 @@ import s from "./ImageSlider.scss"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronRight,
         faChevronLeft,
-        faCircle} from "@fortawesome/free-solid-svg-icons";
+        faCircle,
+        faPlay,
+        faPause} from "@fortawesome/free-solid-svg-icons";
 
 export default class ImageSlider extends Component {
 
@@ -11,7 +13,40 @@ export default class ImageSlider extends Component {
         super(props);
         this.props = props;
         this.state = {  panelClassSuffix: ["initial", "standby", "standby"],
-                        activeIndex: 0}
+                        activeIndex: 0,
+                        isAutoPlay: false}
+        this.autoPlayTimer = null;
+        this.autoPlayInterval_ms = 2000;
+    }
+
+    componentDidMount() {
+        // Start autoplay
+        if (this.state.isAutoPlay === true && !this.autoPlayTimer) {
+            this.startAutoPlay();
+        }
+    }
+
+    componentDidUpdate() {
+        // Start autoplay
+        if (this.state.isAutoPlay === true && !this.autoPlayTimer) {
+            this.startAutoPlay();
+        }
+
+        // Stop autoplay
+        else if (this.state.isAutoPlay === false && this.autoPlayTimer){
+            this.stopAutoPlay();
+        }
+    }
+
+    startAutoPlay = () => {
+        this.autoPlayTimer = setInterval(() => {
+            this.activateNextPanel();
+        }, this.autoPlayInterval_ms)
+    }
+
+    stopAutoPlay = () => {
+        clearInterval(this.autoPlayTimer)
+        this.autoPlayTimer = null;
     }
 
     activateNextPanel = () => {
@@ -25,10 +60,6 @@ export default class ImageSlider extends Component {
     }
 
     activatePanel = (index) => {
-        console.log("Moving to another panel");
-        console.log("Requested index is: " + index);
-        console.log("Current index is: " + this.state.activeIndex);
-
         // find index of the active panel
         let activeIndex = this.state.activeIndex;
 
@@ -51,6 +82,10 @@ export default class ImageSlider extends Component {
         }
     };
 
+    toggleAutoPlayState = () => {
+        this.setState({isAutoPlay: !this.state.isAutoPlay});
+    };
+
     buildPanelClassName = (index) => {
         let baseClass = 'hero__item_' + index;
         let modifierClass = 'hero__item--' + this.state.panelClassSuffix[index];
@@ -64,6 +99,21 @@ export default class ImageSlider extends Component {
             suffix = '--active';
         }
         return s[baseClass + suffix];
+    };
+
+    onClickPrev = () => {
+        this.activatePrevPanel()
+        this.setState({isAutoPlay: false})
+    };
+
+    onClickNext = () => {
+        this.activateNextPanel()
+        this.setState({isAutoPlay: false})
+    };
+
+    onClickGoto = (index) => {
+        this.activatePanel(index)
+        this.setState({isAutoPlay: false})
     }
 
     render()
@@ -72,21 +122,25 @@ export default class ImageSlider extends Component {
             <div className={s['hero']}>
                 <div className={s['hero__goToControls']}>
                     <div className={this.buildGotoButtonClassName(0)}>
-                        <FontAwesomeIcon icon={faCircle} onClick={()=>this.activatePanel(0)} />
+                        <FontAwesomeIcon icon={faCircle} onClick={()=>this.onClickGoto(0)} />
                     </div>
                     <div className={this.buildGotoButtonClassName(1)}>
-                        <FontAwesomeIcon icon={faCircle} onClick={()=>this.activatePanel(1)}/>
+                        <FontAwesomeIcon icon={faCircle} onClick={()=>this.onClickGoto(1)}/>
                     </div>
                     <div className={this.buildGotoButtonClassName(2)}>
-                        <FontAwesomeIcon icon={faCircle} onClick={()=>this.activatePanel(2)}/>
+                        <FontAwesomeIcon icon={faCircle} onClick={()=>this.onClickGoto(2)}/>
+                    </div>
+                    <div className={s['hero__playPauseButton']} onClick={this.toggleAutoPlayState}>
+                        {this.state.isAutoPlay ? <FontAwesomeIcon icon={faPause}/> : <FontAwesomeIcon icon={faPlay}/>}
                     </div>
                 </div>
+
                 <div className={s['hero__nextControls']}>
                     <div className={s['hero__nextControlButton']}>
-                        <FontAwesomeIcon icon={faChevronLeft} onClick={this.activatePrevPanel}/>
+                        <FontAwesomeIcon icon={faChevronLeft} onClick={this.onClickPrev}/>
                     </div>
                     <div className={s['hero__nextControlButton']}>
-                        <FontAwesomeIcon icon={faChevronRight} onClick={this.activateNextPanel}/>
+                        <FontAwesomeIcon icon={faChevronRight} onClick={this.onClickNext}/>
                     </div>
                 </div>
                 <div className={this.buildPanelClassName(0)}  >
